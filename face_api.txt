@@ -1,0 +1,37 @@
+//特蓝图人脸识别封装接口说明
+
+//初始化
+//返回值为  不于0为失败
+face_init()
+
+//输入检测的图片
+//返回值无
+face_input_image(color_image)
+
+//是否检测有跟踪的人
+//返回值 bool True为检测到了，False 为没有检测
+face_check_person()->Bool
+
+//读取跟踪人相关信息
+//返回值为josn格式字符串
+face_get_face_info()
+
+参数说明     
+{
+    "face_info":{
+            "face_id":"1", 人脸编号
+            "face_position":[   //人脸坐标 左上角x,y, 右下角坐标(x,y)
+                30,    
+                20,
+                40,
+                50],
+            "image_posion":[  //原图大小 左上角x,y, 右下角坐标(x,y)
+                0,
+                0,
+                1080,
+                720
+            ]
+        }
+}
+
+
